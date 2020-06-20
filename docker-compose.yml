@@ -5,7 +5,7 @@ services:
     container_name: production_nginx
     volumes:
       - ./logs:/var/log/nginx/log
-      - ./site.conf:/etc/nginx/conf.d/default.conf
+      - ./sites-enabled:/etc/nginx/sites-enabled/
       - ./certs:/etc/nginx/ssl
       - ./htpasswd/:/etc/htpasswd
     ports:
